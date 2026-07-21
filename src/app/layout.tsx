@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -17,6 +17,13 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
+
+// viewport-fit=cover habilita las safe-areas del iPhone (notch / barra inferior).
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

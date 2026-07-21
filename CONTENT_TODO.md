@@ -26,6 +26,12 @@ Editar en [`src/data/rooms.ts`](src/data/rooms.ts) por cada sala:
 - [ ] Servicios adicionales y sus precios (`optionalServices`)
 - [ ] Descripción larga definitiva (`fullDescription`)
 
+## Equipamiento (sección de la home)
+Editar en [`src/components/EquipmentSection.tsx`](src/components/EquipmentSection.tsx):
+
+- [ ] Confirmar detalle y cantidades reales (softboxes, luces LED, fondos, TV, croma).
+- [ ] Ajustar los textos si hace falta.
+
 ## Condiciones (por sala, campo `conditions`)
 - [ ] Política de cancelación
 - [ ] Horario de ingreso y salida

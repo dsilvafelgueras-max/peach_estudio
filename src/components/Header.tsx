@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 safe-pt transition-colors duration-300 ${
         solid ? "bg-cream/95 backdrop-blur border-b border-line" : "bg-transparent"
       }`}
     >
@@ -71,7 +71,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setMenuOpen(true)}
-          className={`inline-flex h-10 w-10 items-center justify-center md:hidden ${
+          className={`-mr-2 inline-flex h-11 w-11 items-center justify-center md:hidden ${
             solid ? "text-ink" : "text-white"
           }`}
           aria-label="Abrir menú"

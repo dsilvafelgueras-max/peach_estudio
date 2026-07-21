@@ -54,6 +54,29 @@
   .btn-light {
     @apply btn bg-white text-ink border border-line hover:border-ink;
   }
+
+  /* Altura de viewport robusta para mobile (iOS Safari incluido).
+     Usa 100vh como fallback y 100dvh donde esté soportado. */
+  .min-h-dvh {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  .h-dvh {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  /* Respeta el notch / safe areas del iPhone. */
+  .safe-px {
+    padding-left: max(1.25rem, env(safe-area-inset-left));
+    padding-right: max(1.25rem, env(safe-area-inset-right));
+  }
+  .safe-pt {
+    padding-top: env(safe-area-inset-top);
+  }
+  .safe-pb {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
 
 /* Respetar prefers-reduced-motion: sin animaciones ni scroll suave. */

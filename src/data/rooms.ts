@@ -118,15 +118,18 @@ export const rooms: Room[] = [
     // TODO(Peach Estudio): confirmar características reales de la sala.
     features: [
       "Espacio versátil",
-      "Iluminación de estudio",
-      "Buena iluminación",
+      "Softboxes e iluminación LED",
+      "Fondos de colores",
+      "Pantalla / TV grande",
       "Wi-Fi",
       "Fácil acceso",
     ],
     // TODO(Peach Estudio): confirmar servicios incluidos.
     includedServices: [
       "Wi-Fi",
-      "Iluminación de estudio",
+      "Softboxes e iluminación de estudio",
+      "Fondos de colores",
+      "Pantalla / TV grande",
       "Tomas eléctricas",
       "Zona de preparación",
       "Baño",
@@ -169,7 +172,8 @@ export const rooms: Room[] = [
     // TODO(Peach Estudio): confirmar características reales de la sala.
     features: [
       "Pantalla verde / croma",
-      "Iluminación de video",
+      "Softboxes e iluminación de video",
+      "Pantalla / TV grande",
       "Espacio versátil",
       "Wi-Fi",
       "Fácil acceso",
@@ -178,7 +182,8 @@ export const rooms: Room[] = [
     includedServices: [
       "Wi-Fi",
       "Pantalla verde",
-      "Iluminación de video",
+      "Softboxes e iluminación de video",
+      "Pantalla / TV grande",
       "Tomas eléctricas",
       "Baño",
     ],

@@ -5,6 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import RoomsGrid from "@/components/RoomsGrid";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import CTASection from "@/components/CTASection";
+import EquipmentSection from "@/components/EquipmentSection";
 import Reveal from "@/components/Reveal";
 import { getFeaturedRooms } from "@/data/rooms";
 
@@ -66,8 +67,8 @@ export default function HomePage() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden bg-peach-50">
               <Image
-                src="/images/home/studio-02.jpg"
-                alt="Detalle del estudio"
+                src="/images/home/salon-miel.jpg"
+                alt="Sala de maquillaje y preparación de Peach Estudio"
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
@@ -131,6 +132,9 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
+
+      {/* Equipamiento del estudio (luces, fondos, croma, TV) */}
+      <EquipmentSection />
 
       {/* 6.6 Sección editorial */}
       <section className="relative">
