@@ -56,6 +56,13 @@ const jsonLd = {
   name: site.name,
   description: site.description,
   url: site.url,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Güemes 4821",
+    addressLocality: "Palermo",
+    addressRegion: "CABA",
+    addressCountry: "AR",
+  },
 };
 
 export default function RootLayout({

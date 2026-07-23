@@ -1,8 +1,8 @@
-// Fuente única de verdad para las salas de Peach Estudio.
+// Fuente única de verdad para los espacios de Peach Estudio.
 // Editar acá para cambiar textos, precios o imágenes; los componentes leen de este archivo.
 // Los valores marcados "A confirmar" están pendientes de validación (ver CONTENT_TODO.md).
 
-export type RoomCategory = "makeup" | "photo" | "chroma";
+export type RoomCategory = "beauty" | "estudio";
 
 export type Room = {
   id: string;
@@ -12,15 +12,23 @@ export type Room = {
   category: string;
   /** Clave de categoría usada por los filtros. */
   categoryKey: RoomCategory;
+  /** Marca si el puesto es privado (solo el verde). */
+  isPrivate?: boolean;
   shortDescription: string;
   fullDescription: string;
   /** Texto que se muestra como precio (ej. "A confirmar" o "$X por hora"). */
   priceLabel: string;
+  /** Aclaración breve bajo el precio (ej. condiciones de reserva). */
+  priceNote?: string;
   pricePerHour?: number;
   currency: "ARS" | "USD";
   minimumHours?: number;
   capacity?: number;
+  /** Texto libre de capacidad cuando no es un número simple (ej. "4 (ampliable a 6)"). */
+  capacityLabel?: string;
   sizeM2?: number;
+  /** Texto libre de superficie (ej. "3 x 5 m"). */
+  sizeLabel?: string;
   coverImage: string;
   gallery: string[];
   features: string[];
@@ -33,157 +41,182 @@ export type Room = {
   featured: boolean;
 };
 
-// Etiquetas de filtro para la página /salas. La clave "all" agrupa todas.
+// Etiquetas de filtro para la página /salas. La clave "all" agrupa todos.
 export const roomFilters: { key: "all" | RoomCategory; label: string }[] = [
-  { key: "all", label: "Todas" },
-  { key: "makeup", label: "Maquillaje" },
-  { key: "photo", label: "Fotografía" },
-  { key: "chroma", label: "Video y croma" },
+  { key: "all", label: "Todos" },
+  { key: "beauty", label: "Puestos beauty" },
+  { key: "estudio", label: "Estudio" },
 ];
 
-// TODO(Peach Estudio): confirmar precios, capacidad, superficie, servicios y condiciones.
+// Concepto general del sector beauty (compartido en las descripciones).
+// Pensado para maquilladores profesionales: dictar clases, atender clientes o hacer pruebas.
+const reservaCondiciones = [
+  "Reserva del 50%; el 50% restante se abona el mismo día.",
+  "La reserva no se devuelve en caso de no asistir.",
+  "Cantidad mínima de horas: a confirmar.",
+  "Horario de ingreso y salida: a confirmar.",
+  "Cuidado del espacio y del equipamiento a cargo de quien reserva.",
+];
+
+// TODO(Peach Estudio): confirmar precios por espacio, superficie y servicios.
 export const rooms: Room[] = [
   {
-    id: "sala-de-maquillaje",
-    slug: "sala-de-maquillaje",
-    name: "Sala de Maquillaje",
-    category: "Maquillaje y preparación",
-    categoryKey: "makeup",
+    id: "puesto-para-4",
+    slug: "puesto-para-4",
+    name: "Sala / espejo para 4",
+    category: "Puesto beauty",
+    categoryKey: "beauty",
     shortDescription:
-      "Un espacio cómodo y luminoso preparado para maquillaje, peinado y producción.",
+      "Barra con espejo iluminado para trabajar hasta 4 personas, ampliable a 6 sumando el puesto de al lado.",
     fullDescription:
-      "Una sala pensada para la preparación previa a cualquier producción: maquillaje, peinado y styling. " +
-      "Cuenta con estaciones frente a espejos con iluminación pareja, ideal para trabajar en detalle y sin apuro. " +
-      "Sirve tanto para make-up artists que atienden clientas como para equipos que necesitan un lugar de preparación " +
-      "antes de una sesión de fotos o un rodaje. Un ambiente prolijo, silencioso y con buena luz para que cada look salga como fue pensado.",
-    priceLabel: "A confirmar",
+      "Un puesto de trabajo amplio, con barra y espejo de iluminación tipo camarín, pensado para maquilladores profesionales " +
+      "que necesitan trabajar con varias personas a la vez: desde dictar clases hasta atender clientas o hacer pruebas. " +
+      "Permite trabajar hasta 4 personas y se puede ampliar a 6 sumando el puesto individual de al lado. " +
+      "Además del espejo, contamos con mesa auxiliar para accesorios y producciones, y distintas mesas para utilizar según lo que necesites.",
+    priceLabel: "Consultar",
     currency: "ARS",
-    coverImage: "/images/rooms/makeup/makeup-room-01.jpg",
-    gallery: [
-      "/images/rooms/makeup/makeup-room-01.jpg",
-      "/images/rooms/makeup/makeup-room-02.jpg",
-      "/images/rooms/makeup/makeup-room-03.jpg",
-      "/images/rooms/makeup/makeup-room-04.jpg",
-    ],
-    // TODO(Peach Estudio): confirmar características reales de la sala.
+    capacity: 4,
+    capacityLabel: "4 personas (ampliable a 6 sumando el puesto de al lado)",
+    coverImage: "/images/rooms/beauty4/beauty4-01.jpg",
+    gallery: ["/images/rooms/beauty4/beauty4-01.jpg"],
+    // TODO(Peach Estudio): confirmar características reales.
     features: [
-      "Espejos con iluminación tipo camarín",
+      "Barra para 4 puestos (ampliable a 6)",
+      "Espejo con iluminación tipo camarín",
+      "Mesa auxiliar para accesorios",
       "Buena iluminación",
-      "Zona de preparación",
       "Wi-Fi",
-      "Fácil acceso",
     ],
-    // TODO(Peach Estudio): confirmar servicios incluidos.
     includedServices: [
       "Wi-Fi",
-      "Estaciones frente a espejo",
-      "Iluminación de preparación",
+      "Espejo iluminado",
+      "Mesa auxiliar y mesas de trabajo",
+      "Tomas eléctricas",
+      "Baño",
+    ],
+    conditions: reservaCondiciones,
+    featured: true,
+  },
+  {
+    id: "puesto-individual",
+    slug: "puesto-individual",
+    name: "Sala / espejo individual",
+    category: "Puesto beauty",
+    categoryKey: "beauty",
+    shortDescription:
+      "Puesto individual con espejo de 2,20 m de alto, cómodo para maquillaje y peinado de una persona.",
+    fullDescription:
+      "Un puesto de trabajo individual, con espejo de 2,20 m de alto, ideal para maquilladores profesionales que atienden " +
+      "a una clienta con comodidad, hacen pruebas o preparan un look sin apuro. Un ambiente prolijo y con buena luz para " +
+      "trabajar en detalle. Se puede combinar con el puesto para 4 de al lado cuando necesitás más lugar. " +
+      "Contamos también con mesa auxiliar para accesorios y distintas mesas para utilizar.",
+    priceLabel: "Consultar",
+    currency: "ARS",
+    capacity: 1,
+    coverImage: "/images/rooms/beauty-individual/beauty-individual-01.jpg",
+    gallery: ["/images/rooms/beauty-individual/beauty-individual-01.jpg"],
+    features: [
+      "Puesto individual",
+      "Espejo de 2,20 m de alto",
+      "Mesa auxiliar para accesorios",
+      "Buena iluminación",
+      "Wi-Fi",
+    ],
+    includedServices: [
+      "Wi-Fi",
+      "Espejo iluminado",
+      "Mesa auxiliar y mesas de trabajo",
+      "Tomas eléctricas",
+      "Baño",
+    ],
+    conditions: reservaCondiciones,
+    featured: true,
+  },
+  {
+    id: "puesto-privado",
+    slug: "puesto-privado",
+    name: "Sala para 2 · opción privado",
+    category: "Puesto beauty privado",
+    categoryKey: "beauty",
+    isPrivate: true,
+    shortDescription:
+      "Espacio privado para 2 personas, con espera para 2 más. Ideal para prueba de novia. Camilla opcional para tratamientos.",
+    fullDescription:
+      "El único puesto privado del estudio: un espacio reservado para atender a 2 personas, con lugar de espera para 2 más. " +
+      "Ideal para pruebas de novia, atención personalizada y servicios que necesitan intimidad. " +
+      "Cuenta con camilla opcional marca Sierra Comfort, exclusiva de este espacio, ideal para tratamientos faciales, cejas, masajes y más. " +
+      "Un ambiente prolijo y tranquilo, con mesa auxiliar para accesorios y distintas mesas para utilizar.",
+    priceLabel: "Consultar",
+    currency: "ARS",
+    capacity: 2,
+    capacityLabel: "2 personas (+ espera para 2 más)",
+    coverImage: "/images/rooms/beauty-privado/beauty-privado-01.jpg",
+    gallery: [
+      "/images/rooms/beauty-privado/beauty-privado-01.jpg",
+      "/images/rooms/beauty-privado/beauty-privado-02.jpg",
+    ],
+    features: [
+      "Espacio privado",
+      "Capacidad para 2 (+ espera para 2)",
+      "Camilla Sierra Comfort (opcional)",
+      "Ideal prueba de novia",
+      "Mesa auxiliar para accesorios",
+      "Wi-Fi",
+    ],
+    includedServices: [
+      "Wi-Fi",
+      "Espacio privado",
+      "Espejo iluminado",
+      "Mesa auxiliar y mesas de trabajo",
       "Tomas eléctricas",
       "Baño",
     ],
     optionalServices: [
-      { name: "Asistencia de producción", priceLabel: "Consultar" },
-      { name: "Horas extra", priceLabel: "Consultar" },
+      {
+        name: "Camilla Sierra Comfort para tratamientos (faciales, cejas, masajes)",
+        priceLabel: "Consultar",
+      },
     ],
-    // TODO(Peach Estudio): validar condiciones y política de cancelación.
-    conditions: [
-      "Cantidad mínima de horas: a confirmar.",
-      "Política de cancelación: a confirmar.",
-      "Horario de ingreso y salida: a confirmar.",
-      "Cuidado del espacio y del equipamiento a cargo de quien reserva.",
-      "Forma de confirmación / seña: a confirmar.",
-    ],
+    conditions: reservaCondiciones,
     featured: true,
   },
   {
-    id: "estudio-fotografico",
-    slug: "estudio-fotografico",
-    name: "Estudio Fotográfico",
-    category: "Fotografía",
-    categoryKey: "photo",
+    id: "estudio",
+    slug: "estudio",
+    name: "Estudio",
+    category: "Fotografía y contenido",
+    categoryKey: "estudio",
     shortDescription:
       "Un ambiente versátil para sesiones de fotos, retratos, producto y creación de contenido.",
     fullDescription:
-      "Un estudio flexible para fotografía de retrato, producto, moda y creación de contenido. " +
-      "El espacio permite montar distintos sets según el proyecto y trabajar con iluminación controlada. " +
-      "Es ideal para fotógrafos, marcas que producen su propio contenido y creadores que necesitan un ambiente " +
-      "neutro y prolijo donde concentrarse en la toma. La disposición se adapta a producciones chicas y medianas.",
-    priceLabel: "A confirmar",
+      "Un ambiente versátil para sesiones de fotos, retratos, producto y creación de contenido. " +
+      "Espacio de 3 x 5 m, preparado para fotografía, video y producciones, con 3 fondos a elección: blanco, negro y croma (pantalla verde). " +
+      "Cuenta además con monitor / pantalla grande, ideal para dictar masterclass, cursos y capacitaciones. " +
+      "El fondo verde permite reemplazar el entorno en edición, y el espacio se adapta a producciones chicas y medianas.",
+    priceLabel: "Jornada completa: $250.000",
+    priceNote:
+      "Estudio completo por jornada. Reserva del 50%; el 50% restante se abona ese día. La reserva no se devuelve si no asistís.",
     currency: "ARS",
-    coverImage: "/images/rooms/photo/photo-studio-01.jpg",
+    sizeLabel: "3 x 5 m",
+    coverImage: "/images/rooms/estudio/estudio-01.jpg",
     gallery: [
-      "/images/rooms/photo/photo-studio-01.jpg",
-      "/images/rooms/photo/photo-studio-02.jpg",
+      "/images/rooms/estudio/estudio-01.jpg",
+      "/images/rooms/estudio/estudio-02.jpg",
+      "/images/rooms/estudio/estudio-03.jpg",
     ],
-    // TODO(Peach Estudio): confirmar características reales de la sala.
     features: [
-      "Espacio versátil",
+      "Espacio de 3 x 5 m",
+      "3 fondos: blanco, negro y croma",
       "Softboxes e iluminación LED",
-      "Fondos de colores",
-      "Pantalla / TV grande",
-      "Wi-Fi",
-      "Fácil acceso",
-    ],
-    // TODO(Peach Estudio): confirmar servicios incluidos.
-    includedServices: [
-      "Wi-Fi",
-      "Softboxes e iluminación de estudio",
-      "Fondos de colores",
-      "Pantalla / TV grande",
-      "Tomas eléctricas",
-      "Zona de preparación",
-      "Baño",
-    ],
-    optionalServices: [
-      { name: "Equipamiento adicional", priceLabel: "Consultar" },
-      { name: "Fondos de colores", priceLabel: "Consultar" },
-      { name: "Horas extra", priceLabel: "Consultar" },
-    ],
-    // TODO(Peach Estudio): validar condiciones y política de cancelación.
-    conditions: [
-      "Cantidad mínima de horas: a confirmar.",
-      "Política de cancelación: a confirmar.",
-      "Horario de ingreso y salida: a confirmar.",
-      "Cuidado del espacio y del equipamiento a cargo de quien reserva.",
-      "Forma de confirmación / seña: a confirmar.",
-    ],
-    featured: true,
-  },
-  {
-    id: "estudio-con-croma",
-    slug: "estudio-con-croma",
-    name: "Estudio con Croma",
-    category: "Fotografía y video",
-    categoryKey: "chroma",
-    shortDescription:
-      "Espacio preparado para fotografía, video y producciones con pantalla verde.",
-    fullDescription:
-      "Un set equipado con pantalla verde (croma) para producciones de video y fotografía que requieren fondo removible. " +
-      "Pensado para grabaciones de contenido, entrevistas, piezas para redes y proyectos audiovisuales que se editan luego en post. " +
-      "El fondo verde permite reemplazar el entorno por cualquier escenario digital. Es una buena opción para creadores, " +
-      "productoras chicas y marcas que necesitan grabar con flexibilidad de montaje.",
-    priceLabel: "A confirmar",
-    currency: "ARS",
-    coverImage: "/images/rooms/chroma/chroma-studio-01.jpg",
-    gallery: [
-      "/images/rooms/chroma/chroma-studio-01.jpg",
-      "/images/rooms/chroma/chroma-studio-02.jpg",
-    ],
-    // TODO(Peach Estudio): confirmar características reales de la sala.
-    features: [
-      "Pantalla verde / croma",
-      "Softboxes e iluminación de video",
-      "Pantalla / TV grande",
+      "Monitor / pantalla grande para masterclass",
       "Espacio versátil",
       "Wi-Fi",
-      "Fácil acceso",
     ],
-    // TODO(Peach Estudio): confirmar servicios incluidos.
     includedServices: [
       "Wi-Fi",
-      "Pantalla verde",
-      "Softboxes e iluminación de video",
-      "Pantalla / TV grande",
+      "3 fondos (blanco, negro, croma)",
+      "Softboxes e iluminación de estudio",
+      "Monitor / pantalla grande",
       "Tomas eléctricas",
       "Baño",
     ],
@@ -192,13 +225,12 @@ export const rooms: Room[] = [
       { name: "Asistencia de producción", priceLabel: "Consultar" },
       { name: "Horas extra", priceLabel: "Consultar" },
     ],
-    // TODO(Peach Estudio): validar condiciones y política de cancelación.
     conditions: [
-      "Cantidad mínima de horas: a confirmar.",
-      "Política de cancelación: a confirmar.",
+      "Estudio completo por jornada: $250.000.",
+      "Reserva del 50%; el 50% restante se abona el mismo día.",
+      "La reserva no se devuelve en caso de no asistir.",
       "Horario de ingreso y salida: a confirmar.",
       "Cuidado del espacio y del equipamiento a cargo de quien reserva.",
-      "Forma de confirmación / seña: a confirmar.",
     ],
     featured: true,
   },
@@ -214,7 +246,10 @@ export function getFeaturedRooms(): Room[] {
 
 // Opciones de "Tipo de producción" para el formulario de solicitud.
 export const productionTypes = [
-  "Maquillaje",
+  "Maquillaje / beauty",
+  "Clase / masterclass de maquillaje",
+  "Prueba de novia",
+  "Tratamiento facial / cejas / masajes",
   "Sesión de fotos",
   "Fotografía de producto",
   "Producción de video",

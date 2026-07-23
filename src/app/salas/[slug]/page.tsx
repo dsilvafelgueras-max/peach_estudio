@@ -56,7 +56,7 @@ export default async function RoomPage({
           className="inline-flex items-center gap-2 text-sm text-ink-muted hover:text-ink"
         >
           <ArrowLeft size={16} aria-hidden="true" />
-          Volver a las salas
+          Volver a los espacios
         </Link>
       </div>
 
@@ -78,6 +78,11 @@ export default async function RoomPage({
             Solicitar reserva
           </a>
         </div>
+        {room.priceNote && (
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-muted">
+            {room.priceNote}
+          </p>
+        )}
       </header>
 
       {/* 8.2 Galería */}

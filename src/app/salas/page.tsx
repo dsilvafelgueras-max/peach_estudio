@@ -5,9 +5,9 @@ import CTASection from "@/components/CTASection";
 import { rooms } from "@/data/rooms";
 
 export const metadata: Metadata = {
-  title: "Nuestras salas",
+  title: "Nuestros espacios",
   description:
-    "Explorá las salas de Peach Estudio: maquillaje, fotografía y producciones con croma. Alquiler por hora.",
+    "Explorá los espacios de Peach Estudio: puestos beauty para maquillaje y tratamientos, y estudio para fotografía, contenido y masterclass.",
   alternates: { canonical: "/salas" },
 };
 
@@ -18,9 +18,9 @@ export default function SalasPage() {
         <div className="container-page pb-14">
           <SectionHeading
             as="h1"
-            eyebrow="Salas"
-            title="Nuestras salas"
-            description="Espacios independientes para maquillaje, fotografía y producción audiovisual. Elegí el que mejor se adapte a tu proyecto y envianos tu solicitud."
+            eyebrow="Espacios"
+            title="Nuestros espacios"
+            description="Puestos beauty para maquillaje y tratamientos, y un estudio para fotografía, contenido y masterclass. Elegí el que mejor se adapte a tu proyecto y envianos tu solicitud."
           />
         </div>
       </section>

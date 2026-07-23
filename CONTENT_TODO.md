@@ -10,21 +10,24 @@ Editar en [`src/data/site.ts`](src/data/site.ts):
 - [ ] Teléfono — `[TELEFONO_PEACH_STUDIO]`
 - [ ] WhatsApp (puede ser el mismo teléfono)
 - [ ] Instagram — `[INSTAGRAM_PEACH_STUDIO]`
-- [ ] Dirección o barrio / zona general — `[DIRECCION_PEACH_STUDIO]`
-      (no publicar la dirección exacta hasta confirmar)
+- [x] Dirección — Güemes 4821, Palermo, CABA ✓
 - [ ] Horarios de atención — `[HORARIOS_PEACH_STUDIO]`
 
-## Datos de cada sala
-Editar en [`src/data/rooms.ts`](src/data/rooms.ts) por cada sala:
+## Datos de cada espacio
+Editar en [`src/data/rooms.ts`](src/data/rooms.ts) por cada espacio:
 
-- [ ] Precio por hora / etiqueta de precio (`priceLabel`, `pricePerHour`, `currency`)
+- [x] Estructura definida: 3 puestos beauty (para 4 ampliable a 6, individual, privado) + Estudio ✓
+- [x] Precio del Estudio: $250.000 por jornada (reserva 50%, no reembolsable) ✓
+- [ ] Precio de los puestos beauty (hoy "Consultar")
 - [ ] Cantidad mínima de horas (`minimumHours`)
-- [ ] Capacidad (`capacity`)
-- [ ] Superficie en m² (`sizeM2`)
-- [ ] Servicios incluidos reales (`includedServices`)
-- [ ] Equipamiento específico de la sala (`features`)
-- [ ] Servicios adicionales y sus precios (`optionalServices`)
-- [ ] Descripción larga definitiva (`fullDescription`)
+- [ ] Superficie de los puestos beauty (el Estudio ya es 3x5 m ✓)
+- [ ] Confirmar servicios incluidos reales por espacio
+- [ ] Precio de la camilla Sierra Comfort (opcional, solo en el privado)
+- [ ] Foto del conjunto "sala de 4 + la de al lado = 6" (cuando la tengan)
+
+## Video del recorrido
+- [ ] Pasar el video (archivo MP4 o link de YouTube/Vimeo) para cargarlo en
+      [`src/components/VideoSection.tsx`](src/components/VideoSection.tsx).
 
 ## Equipamiento (sección de la home)
 Editar en [`src/components/EquipmentSection.tsx`](src/components/EquipmentSection.tsx):

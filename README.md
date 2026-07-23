@@ -35,6 +35,7 @@ cp .env.example .env.local
 | `RESEND_API_KEY` | API key de Resend. |
 | `BOOKING_NOTIFICATION_EMAIL` | Correo donde la propietaria recibe las solicitudes. |
 | `EMAIL_FROM` | Remitente verificado en Resend (ej. `Peach Estudio <hola@tudominio.com>`). |
+| `ADMIN_PASSWORD` | Contraseña del panel de administración (`/admin`). |
 
 > El sitio funciona sin Supabase/Resend configurados (los formularios validan y no
 > rompen), pero las solicitudes no se guardan ni se envían por correo hasta completar
@@ -108,7 +109,20 @@ Editá `BOOKING_NOTIFICATION_EMAIL` en tu `.env.local` (y en Vercel, en producci
 El formulario valida en cliente y en servidor (Zod), deshabilita el botón mientras
 envía e incluye un honeypot anti-spam.
 
-## 9. Desplegar en Vercel
+## 9. Panel de administración (`/admin`)
+
+Para ver y validar las solicitudes hay un panel simple protegido por contraseña:
+
+1. Definí `ADMIN_PASSWORD` en `.env.local` (y en Vercel para producción).
+2. Entrá a `/admin`, ingresá la contraseña.
+3. Vas a ver todas las solicitudes ordenadas por fecha, con filtros por estado
+   (Nueva, Contactada, Confirmada, Rechazada, Cancelada), botones para responder
+   por **email** o **WhatsApp**, y para **cambiar el estado** de cada una.
+
+El panel lee y escribe en la tabla `booking_requests` de Supabase, así que necesita
+que Supabase esté configurado. La página no se indexa en buscadores.
+
+## 10. Desplegar en Vercel
 
 1. Subí el repositorio a GitHub.
 2. En [vercel.com](https://vercel.com), **New Project** → importá el repo.

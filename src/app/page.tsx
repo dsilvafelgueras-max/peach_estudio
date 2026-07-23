@@ -6,6 +6,8 @@ import RoomsGrid from "@/components/RoomsGrid";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import CTASection from "@/components/CTASection";
 import EquipmentSection from "@/components/EquipmentSection";
+import PatioSection from "@/components/PatioSection";
+import VideoSection from "@/components/VideoSection";
 import Reveal from "@/components/Reveal";
 import { getFeaturedRooms } from "@/data/rooms";
 
@@ -23,8 +25,8 @@ const generalFeatures = [
 const steps = [
   {
     n: "01",
-    title: "Elegí una sala",
-    text: "Explorá los espacios y encontrá el que mejor se adapta a tu producción.",
+    title: "Elegí un espacio",
+    text: "Explorá los puestos beauty y el estudio, y encontrá el que mejor se adapta a tu producción.",
   },
   {
     n: "02",
@@ -52,7 +54,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="El estudio"
               title="Un espacio creativo, pensado en detalle."
-              description="Peach Estudio es un espacio creativo diseñado para producciones de fotografía, video, maquillaje y contenido. Cada ambiente puede reservarse de forma independiente según las necesidades de cada proyecto."
+              description="Peach Estudio es un espacio creativo diseñado para producciones de fotografía, video, maquillaje y contenido. Está pensado para maquilladores profesionales que quieran dictar clases, atender a sus clientas o hacer pruebas. Cada ambiente puede reservarse de forma independiente según las necesidades de cada proyecto."
             />
           </Reveal>
           <Reveal className="mt-12 grid gap-4 md:grid-cols-2">
@@ -82,9 +84,9 @@ export default function HomePage() {
       <section className="border-t border-line">
         <div className="container-page py-20 md:py-28">
           <Reveal className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHeading eyebrow="Salas" title="Nuestros espacios" />
+            <SectionHeading eyebrow="Espacios" title="Nuestros espacios" />
             <Link href="/salas" className="link-underline text-sm font-medium text-ink">
-              Ver todas las salas
+              Ver todos los espacios
             </Link>
           </Reveal>
           <Reveal className="mt-12">
@@ -136,6 +138,9 @@ export default function HomePage() {
       {/* Equipamiento del estudio (luces, fondos, croma, TV) */}
       <EquipmentSection />
 
+      {/* Patio (espacio común, también para fotos) */}
+      <PatioSection />
+
       {/* 6.6 Sección editorial */}
       <section className="relative">
         <div className="relative h-[60vh] min-h-[420px] overflow-hidden">
@@ -154,6 +159,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Recorrido en video (preparado para cargar) */}
+      <VideoSection />
 
       {/* 6.7 Llamado a la acción */}
       <CTASection />

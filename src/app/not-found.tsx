@@ -14,7 +14,7 @@ export default function NotFound() {
             Ir al inicio
           </Link>
           <Link href="/salas" className="btn-secondary w-full sm:w-auto">
-            Ver las salas
+            Ver los espacios
           </Link>
         </div>
       </div>

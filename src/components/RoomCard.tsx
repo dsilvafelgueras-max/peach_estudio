@@ -25,6 +25,11 @@ export default function RoomCard({
           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           priority={priority}
         />
+        {room.isPrivate && (
+          <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-ink">
+            Privado
+          </span>
+        )}
       </Link>
 
       <div className="mt-5 flex flex-1 flex-col">
@@ -41,7 +46,13 @@ export default function RoomCard({
         <dl className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-sm text-ink-muted">
           <div className="flex gap-1.5">
             <dt>Capacidad:</dt>
-            <dd>{room.capacity ? `${room.capacity} personas` : "A confirmar"}</dd>
+            <dd>
+              {room.capacityLabel
+                ? room.capacityLabel
+                : room.capacity
+                  ? `${room.capacity} ${room.capacity === 1 ? "persona" : "personas"}`
+                  : "A confirmar"}
+            </dd>
           </div>
           <div className="flex gap-1.5">
             <dt>Precio:</dt>
@@ -53,7 +64,7 @@ export default function RoomCard({
           href={`/salas/${room.slug}`}
           className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-ink"
         >
-          <span className="link-underline">Ver sala</span>
+          <span className="link-underline">Ver espacio</span>
           <ArrowRight
             size={16}
             aria-hidden="true"

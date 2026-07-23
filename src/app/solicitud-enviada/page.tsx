@@ -30,7 +30,7 @@ export default function SolicitudEnviadaPage() {
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link href="/salas" className="btn-primary w-full sm:w-auto">
-            Volver a las salas
+            Volver a los espacios
           </Link>
           <Link href="/" className="btn-secondary w-full sm:w-auto">
             Ir al inicio
