@@ -10,7 +10,7 @@ export const site = {
 
   // TODO(Peach Estudio): reemplazar por datos reales.
   contact: {
-    email: "[EMAIL_PEACH_STUDIO]",
+    email: "peachestudioinfo@gmail.com",
     // Teléfono / WhatsApp del estudio. Para el link de WhatsApp se usan solo
     // los dígitos (con código de país).
     phone: "+54 9 11 3410-3143",

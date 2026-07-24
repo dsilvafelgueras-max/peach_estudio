@@ -11,7 +11,7 @@ Editar en [`src/data/site.ts`](src/data/site.ts):
       (ej. Argentina: `5491112345678`). Hasta cargarlo, los botones muestran
       "WhatsApp (a configurar)".
 - [ ] Teléfono visible — `[TELEFONO_PEACH_STUDIO]`
-- [ ] Email de contacto — `[EMAIL_PEACH_STUDIO]`
+- [x] Email de contacto — peachestudioinfo@gmail.com ✓
 - [ ] Instagram — `[INSTAGRAM_PEACH_STUDIO]`
 - [x] Dirección — Güemes 4821, Palermo, CABA ✓
 - [ ] Horarios de atención — `[HORARIOS_PEACH_STUDIO]`
