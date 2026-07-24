@@ -56,16 +56,6 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/contacto"
-            className={
-              solid
-                ? "btn-primary text-sm"
-                : "btn text-sm bg-white text-ink hover:bg-white/90"
-            }
-          >
-            Consultar disponibilidad
-          </Link>
         </nav>
 
         <button

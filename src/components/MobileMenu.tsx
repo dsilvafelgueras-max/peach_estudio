@@ -64,13 +64,6 @@ export default function MobileMenu({
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/contacto"
-            onClick={onClose}
-            className="btn-primary mt-6 w-full"
-          >
-            Consultar disponibilidad
-          </Link>
         </nav>
       </div>
     </div>
