@@ -243,17 +243,3 @@ export function getRoomBySlug(slug: string): Room | undefined {
 export function getFeaturedRooms(): Room[] {
   return rooms.filter((room) => room.featured);
 }
-
-// Opciones de "Tipo de producción" para el formulario de solicitud.
-export const productionTypes = [
-  "Maquillaje / beauty",
-  "Clase / masterclass de maquillaje",
-  "Prueba de novia",
-  "Tratamiento facial / cejas / masajes",
-  "Sesión de fotos",
-  "Fotografía de producto",
-  "Producción de video",
-  "Contenido para redes",
-  "Casting o fitting",
-  "Otro",
-] as const;

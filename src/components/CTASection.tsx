@@ -1,7 +1,10 @@
-import Link from "next/link";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 // Llamado a la acción sobre fondo durazno muy claro (componente de servidor).
 export default function CTASection() {
+  const waMessage =
+    "¡Hola Peach Estudio! Tengo una producción en mente y quiero consultar disponibilidad.";
+
   return (
     <section className="bg-peach-100">
       <div className="container-page py-20 text-center md:py-28">
@@ -11,9 +14,9 @@ export default function CTASection() {
         <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-ink-soft">
           Contanos qué necesitás y te ayudamos a encontrar el espacio adecuado.
         </p>
-        <Link href="/contacto" className="btn-primary mt-8">
-          Consultar disponibilidad
-        </Link>
+        <div className="mt-8 flex justify-center">
+          <WhatsAppButton message={waMessage} label="Consultar por WhatsApp" />
+        </div>
       </div>
     </section>
   );

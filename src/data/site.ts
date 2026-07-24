@@ -11,7 +11,11 @@ export const site = {
   // TODO(Peach Estudio): reemplazar por datos reales.
   contact: {
     email: "[EMAIL_PEACH_STUDIO]",
+    // Teléfono / WhatsApp del estudio. Para el link de WhatsApp se usan solo
+    // los dígitos (con código de país). Ej. Argentina: "5491112345678".
+    // TODO(Peach Estudio): completar con el número real.
     phone: "[TELEFONO_PEACH_STUDIO]",
+    whatsapp: "[WHATSAPP_PEACH_STUDIO]",
     instagram: "[INSTAGRAM_PEACH_STUDIO]",
     address: "Güemes 4821, Palermo, CABA",
     // Zona general (por si se prefiere no mostrar la altura exacta en algún lugar).
@@ -19,6 +23,15 @@ export const site = {
     hours: "[HORARIOS_PEACH_STUDIO]",
   },
 } as const;
+
+// Arma un link de WhatsApp con un mensaje pre-escrito.
+// Si el número todavía es el placeholder, devuelve null (los componentes
+// muestran un fallback en ese caso).
+export function whatsappLink(message: string): string | null {
+  const digits = site.contact.whatsapp.replace(/[^\d]/g, "");
+  if (digits.length < 6) return null; // placeholder o número inválido
+  return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
+}
 
 // Enlaces del menú principal.
 export const navLinks = [

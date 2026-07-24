@@ -6,9 +6,12 @@ aparecen en el sitio como `A confirmar` o entre corchetes (ej. `[EMAIL_PEACH_STU
 ## Datos de contacto
 Editar en [`src/data/site.ts`](src/data/site.ts):
 
+- [ ] **WhatsApp — `[WHATSAPP_PEACH_STUDIO]`** ⚠️ IMPORTANTE: las reservas se hacen
+      por WhatsApp. Cargá el número **solo con dígitos y código de país**
+      (ej. Argentina: `5491112345678`). Hasta cargarlo, los botones muestran
+      "WhatsApp (a configurar)".
+- [ ] Teléfono visible — `[TELEFONO_PEACH_STUDIO]`
 - [ ] Email de contacto — `[EMAIL_PEACH_STUDIO]`
-- [ ] Teléfono — `[TELEFONO_PEACH_STUDIO]`
-- [ ] WhatsApp (puede ser el mismo teléfono)
 - [ ] Instagram — `[INSTAGRAM_PEACH_STUDIO]`
 - [x] Dirección — Güemes 4821, Palermo, CABA ✓
 - [ ] Horarios de atención — `[HORARIOS_PEACH_STUDIO]`
