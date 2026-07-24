@@ -117,10 +117,11 @@ export const rooms: Room[] = [
     priceLabel: "Consultar",
     currency: "ARS",
     capacity: 1,
-    coverImage: "/images/rooms/beauty-individual/beauty-individual-01.jpg",
+    // Portada: espejo en alto. 2ª (hover): sillón de perfil.
+    coverImage: "/images/rooms/beauty-individual/beauty-individual-04.jpg",
     gallery: [
-      "/images/rooms/beauty-individual/beauty-individual-01.jpg",
       "/images/rooms/beauty-individual/beauty-individual-04.jpg",
+      "/images/rooms/beauty-individual/beauty-individual-01.jpg",
       "/images/rooms/beauty-individual/beauty-individual-02-6personas.jpg",
       "/images/rooms/beauty-individual/beauty-individual-03-unidos.jpg",
     ],

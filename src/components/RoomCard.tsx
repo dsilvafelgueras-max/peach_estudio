@@ -25,8 +25,18 @@ export default function RoomCard({
           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           priority={priority}
         />
+        {/* Segunda foto: aparece al pasar el mouse / enfocar la tarjeta. */}
+        {room.gallery[1] && (
+          <Image
+            src={room.gallery[1]}
+            alt={`${room.name} — otra vista`}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-within:opacity-100"
+          />
+        )}
         {room.isPrivate && (
-          <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-ink">
+          <span className="absolute left-3 top-3 z-10 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-ink">
             Privado
           </span>
         )}

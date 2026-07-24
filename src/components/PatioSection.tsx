@@ -27,8 +27,8 @@ export default function PatioSection() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden bg-peach-50">
               <Image
-                src="/images/rooms/patio/patio-02.jpg"
-                alt="Detalle del patio de Peach Estudio"
+                src="/images/rooms/patio/patio-03.jpg"
+                alt="Mural tropical del patio de Peach Estudio"
                 fill
                 sizes="(min-width: 1024px) 25vw, 50vw"
                 loading="lazy"
@@ -37,8 +37,8 @@ export default function PatioSection() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden bg-peach-50">
               <Image
-                src="/images/home/editorial-01.jpg"
-                alt="Ambientación del patio de Peach Estudio"
+                src="/images/rooms/patio/patio-04.jpg"
+                alt="Mesa y ambientación del patio de Peach Estudio"
                 fill
                 sizes="(min-width: 1024px) 25vw, 50vw"
                 loading="lazy"
