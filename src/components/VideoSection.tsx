@@ -1,16 +1,13 @@
-import { Play } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import Reveal from "@/components/Reveal";
 
 // Sección de video del recorrido por el estudio.
-// PREPARADA PARA CARGAR EL VIDEO: cuando Peach Estudio provea el archivo o el
-// link (YouTube/Vimeo/MP4), reemplazar el bloque placeholder por el <video> o
-// <iframe> correspondiente. Ver CONTENT_TODO.md.
+// Para cambiar el video, reemplazá public/videos/recorrido.mp4 (mismo nombre)
+// o actualizá videoSrc / poster acá.
 export default function VideoSection() {
-  // TODO(Peach Estudio): definir la fuente del video.
-  // - MP4 propio:  <video src="/videos/recorrido.mp4" controls poster="..." />
-  // - YouTube:     <iframe src="https://www.youtube.com/embed/ID" ... />
-  const videoSrc: string | null = null;
+  const videoSrc = "/videos/recorrido.mp4";
+  // Póster vertical para que combine con el formato del video (retrato).
+  const poster = "/images/rooms/estudio/estudio-02.jpg";
 
   return (
     <section className="border-t border-line">
@@ -24,24 +21,20 @@ export default function VideoSection() {
           />
         </Reveal>
 
-        <Reveal className="mx-auto mt-12 max-w-4xl">
-          <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-ink/5">
-            {videoSrc ? (
-              // Cuando haya video, reemplazar por el reproductor real.
-              <video
-                src={videoSrc}
-                controls
-                playsInline
-                className="h-full w-full object-cover"
-              />
-            ) : (
-              <div className="flex h-full w-full flex-col items-center justify-center gap-3 text-ink-muted">
-                <span className="flex h-14 w-14 items-center justify-center rounded-full border border-ink/20">
-                  <Play size={22} aria-hidden="true" />
-                </span>
-                <p className="text-sm">Video del recorrido — próximamente</p>
-              </div>
-            )}
+        {/* El video es vertical (formato celular): lo mostramos en retrato,
+            centrado y con altura contenida para que no se recorte. */}
+        <Reveal className="mx-auto mt-12 flex justify-center">
+          <div className="relative aspect-[9/16] w-full max-w-[360px] overflow-hidden rounded-2xl bg-ink/5">
+            <video
+              src={videoSrc}
+              poster={poster}
+              controls
+              playsInline
+              preload="metadata"
+              className="h-full w-full object-cover"
+            >
+              Tu navegador no puede reproducir este video.
+            </video>
           </div>
         </Reveal>
       </div>
