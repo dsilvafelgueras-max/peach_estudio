@@ -20,7 +20,7 @@ export default function PrivacidadPage() {
           <p>
             En Peach Estudio tratamos los datos que nos brindás a través de los formularios
             del sitio con el único fin de responder tus consultas y coordinar el eventual
-            alquiler de nuestras salas.
+            alquiler de nuestros espacios.
           </p>
           <div>
             <h2 className="font-serif text-xl text-ink">Qué datos recopilamos</h2>

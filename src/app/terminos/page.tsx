@@ -28,7 +28,7 @@ export default function TerminosPage() {
           <div>
             <h2 className="font-serif text-xl text-ink">Precios y disponibilidad</h2>
             <p className="mt-2">
-              Los precios y la disponibilidad de las salas están sujetos a confirmación y
+              Los precios y la disponibilidad de los espacios están sujetos a confirmación y
               pueden variar. La información publicada tiene carácter orientativo hasta su
               validación.
             </p>

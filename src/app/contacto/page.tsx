@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Contacto",
   description:
-    "Contactá a Peach Estudio para consultar disponibilidad de nuestras salas creativas.",
+    "Contactá a Peach Estudio para consultar disponibilidad de nuestros espacios creativos.",
   alternates: { canonical: "/contacto" },
 };
 

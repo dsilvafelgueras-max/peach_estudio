@@ -13,7 +13,7 @@ export default function Footer() {
           <p className="font-serif text-2xl text-white">Peach Estudio</p>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
             Espacios creativos para producciones de fotografía, video, maquillaje y
-            contenido. Salas disponibles para alquilar por hora.
+            contenido. Espacios disponibles para reservar por hora o por jornada.
           </p>
         </div>
 
@@ -29,7 +29,7 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/salas" className="link-underline text-white/80 hover:text-white">
-                Salas
+                Espacios
               </Link>
             </li>
             <li>
@@ -40,9 +40,9 @@ export default function Footer() {
           </ul>
         </nav>
 
-        <nav aria-label="Salas">
+        <nav aria-label="Espacios">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/40">
-            Salas
+            Espacios
           </p>
           <ul className="mt-4 space-y-3 text-sm">
             {rooms.map((room) => (

@@ -23,7 +23,7 @@ export const site = {
 // Enlaces del menú principal.
 export const navLinks = [
   { href: "/", label: "Inicio" },
-  { href: "/salas", label: "Salas" },
+  { href: "/salas", label: "Espacios" },
   { href: "/#el-estudio", label: "El estudio" },
   { href: "/contacto", label: "Contacto" },
 ] as const;

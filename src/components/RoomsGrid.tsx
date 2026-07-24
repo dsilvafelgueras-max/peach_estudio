@@ -12,7 +12,7 @@ export default function RoomsGrid({
   if (rooms.length === 0) {
     return (
       <p className="py-12 text-center text-ink-muted">
-        No hay salas para el filtro seleccionado.
+        No hay espacios para el filtro seleccionado.
       </p>
     );
   }

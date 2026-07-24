@@ -22,7 +22,7 @@ export default function RoomFilters({ rooms }: { rooms: Room[] }) {
         <div
           className="flex flex-wrap gap-2"
           role="group"
-          aria-label="Filtrar salas por categoría"
+          aria-label="Filtrar espacios por categoría"
         >
           {roomFilters.map((filter) => {
             const isActive = active === filter.key;

@@ -95,7 +95,7 @@ export default async function RoomPage({
         <div className="lg:col-span-2">
           {/* 8.4 Descripción */}
           <section>
-            <h2 className="font-serif text-2xl text-ink">Sobre la sala</h2>
+            <h2 className="font-serif text-2xl text-ink">Sobre el espacio</h2>
             <p className="mt-4 whitespace-pre-line text-base leading-relaxed text-ink-soft">
               {room.fullDescription}
             </p>

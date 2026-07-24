@@ -16,7 +16,7 @@ const generalFeatures = [
   "Wi-Fi",
   "Buena iluminación",
   "Espacios versátiles",
-  "Equipamiento según la sala",
+  "Equipamiento según el espacio",
   "Baño",
   "Zona de preparación",
   "Fácil acceso",
@@ -126,7 +126,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Características"
               title="Todo lo necesario para producir."
-              description="Servicios generales del espacio. El equipamiento específico depende de cada sala y se confirma al coordinar la reserva."
+              description="Servicios generales del lugar. El equipamiento específico depende de cada espacio y se confirma al coordinar la reserva."
             />
           </Reveal>
           <Reveal className="mt-12">

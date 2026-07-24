@@ -25,7 +25,7 @@ export default function Hero() {
           Espacios pensados para crear.
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
-          Salas de maquillaje, fotografía y producción audiovisual disponibles para
+          Puestos beauty y estudio de fotografía y contenido disponibles para
           alquilar por hora.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

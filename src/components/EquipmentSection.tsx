@@ -30,7 +30,7 @@ export default function EquipmentSection() {
           <SectionHeading
             eyebrow="Equipamiento"
             title="Material listo para producir."
-            description="El estudio cuenta con iluminación profesional, fondos, pantalla verde y una pantalla de gran tamaño. El equipamiento disponible se confirma según la sala y el proyecto."
+            description="El estudio cuenta con iluminación profesional, fondos, pantalla verde y una pantalla de gran tamaño. El equipamiento disponible se confirma según el espacio y el proyecto."
           />
         </Reveal>
 

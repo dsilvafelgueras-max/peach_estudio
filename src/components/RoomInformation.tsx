@@ -17,7 +17,7 @@ export default function RoomInformation({ room }: { room: Room }) {
       : "A confirmar";
 
   const rows: [string, string][] = [
-    ["Tipo de sala", room.category],
+    ["Tipo de espacio", room.category],
     ["Capacidad", capacityValue],
     ["Superficie", sizeValue],
     ["Precio", room.priceLabel],

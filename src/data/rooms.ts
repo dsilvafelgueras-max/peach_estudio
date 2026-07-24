@@ -62,16 +62,16 @@ const reservaCondiciones = [
 export const rooms: Room[] = [
   {
     id: "puesto-para-4",
-    slug: "puesto-para-4",
-    name: "Sala / espejo para 4",
-    category: "Puesto beauty",
+    slug: "beauty-1",
+    name: "Beauty 1",
+    category: "Puesto beauty · para 4 (ampliable a 6)",
     categoryKey: "beauty",
     shortDescription:
       "Barra con espejo iluminado para trabajar hasta 4 personas, ampliable a 6 sumando el puesto de al lado.",
     fullDescription:
       "Un puesto de trabajo amplio, con barra y espejo de iluminación tipo camarín, pensado para maquilladores profesionales " +
       "que necesitan trabajar con varias personas a la vez: desde dictar clases hasta atender clientas o hacer pruebas. " +
-      "Permite trabajar hasta 4 personas y se puede ampliar a 6 sumando el puesto individual de al lado. " +
+      "Permite trabajar hasta 4 personas y se puede ampliar a 6 sumando el puesto individual (Beauty 2) de al lado. " +
       "Además del espejo, contamos con mesa auxiliar para accesorios y producciones, y distintas mesas para utilizar según lo que necesites.",
     priceLabel: "Consultar",
     currency: "ARS",
@@ -99,16 +99,16 @@ export const rooms: Room[] = [
   },
   {
     id: "puesto-individual",
-    slug: "puesto-individual",
-    name: "Sala / espejo individual",
-    category: "Puesto beauty",
+    slug: "beauty-2",
+    name: "Beauty 2",
+    category: "Puesto beauty · individual",
     categoryKey: "beauty",
     shortDescription:
       "Puesto individual con espejo de 2,20 m de alto, cómodo para maquillaje y peinado de una persona.",
     fullDescription:
       "Un puesto de trabajo individual, con espejo de 2,20 m de alto, ideal para maquilladores profesionales que atienden " +
       "a una clienta con comodidad, hacen pruebas o preparan un look sin apuro. Un ambiente prolijo y con buena luz para " +
-      "trabajar en detalle. Se puede combinar con el puesto para 4 de al lado cuando necesitás más lugar. " +
+      "trabajar en detalle. Se puede combinar con el puesto para 4 (Beauty 1) de al lado cuando necesitás más lugar. " +
       "Contamos también con mesa auxiliar para accesorios y distintas mesas para utilizar.",
     priceLabel: "Consultar",
     currency: "ARS",
@@ -134,9 +134,9 @@ export const rooms: Room[] = [
   },
   {
     id: "puesto-privado",
-    slug: "puesto-privado",
-    name: "Sala para 2 · opción privado",
-    category: "Puesto beauty privado",
+    slug: "beauty-3",
+    name: "Beauty 3",
+    category: "Puesto beauty · privado",
     categoryKey: "beauty",
     isPrivate: true,
     shortDescription:
