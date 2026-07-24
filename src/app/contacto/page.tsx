@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const contactItems = [
   { icon: Phone, label: "Teléfono / WhatsApp", value: site.contact.phone },
   { icon: Instagram, label: "Instagram", value: site.contact.instagram },
-  { icon: MapPin, label: "Ubicación", value: site.contact.address },
+  { icon: MapPin, label: "Ubicación", value: site.contact.area },
   { icon: Clock, label: "Horarios", value: site.contact.hours },
 ];
 

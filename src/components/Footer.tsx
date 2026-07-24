@@ -63,9 +63,10 @@ export default function Footer() {
             Contacto
           </p>
           <ul className="mt-4 space-y-3 text-sm text-white/80">
-            <li>{site.contact.email}</li>
+            {site.contact.email && <li>{site.contact.email}</li>}
             <li>{site.contact.phone}</li>
             <li>{site.contact.instagram}</li>
+            <li>{site.contact.area}</li>
           </ul>
           <ul className="mt-6 space-y-3 text-sm">
             <li>

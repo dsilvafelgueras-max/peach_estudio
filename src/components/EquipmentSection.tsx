@@ -6,9 +6,9 @@ import Reveal from "@/components/Reveal";
 // real y las cantidades con Peach Estudio (ver CONTENT_TODO.md).
 const equipment = [
   {
-    image: "/images/equipamiento/luces-fondos.jpg",
-    title: "Iluminación y fondos",
-    text: "Softboxes, luces LED de estudio y fondos de distintos colores para armar cada set.",
+    image: "/images/rooms/estudio/fondo-blanco.png",
+    title: "3 fondos: blanco, negro y verde",
+    text: "El estudio tiene tres fondos a elección. En el detalle del Estudio podés ver los tres.",
   },
   {
     image: "/images/equipamiento/set-monitor.jpg",

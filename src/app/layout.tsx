@@ -58,7 +58,6 @@ const jsonLd = {
   url: site.url,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Güemes 4821",
     addressLocality: "Palermo",
     addressRegion: "CABA",
     addressCountry: "AR",

@@ -78,7 +78,11 @@ export const rooms: Room[] = [
     capacity: 4,
     capacityLabel: "4 personas (ampliable a 6 sumando el puesto de al lado)",
     coverImage: "/images/rooms/beauty4/beauty4-01.jpg",
-    gallery: ["/images/rooms/beauty4/beauty4-01.jpg"],
+    gallery: [
+      "/images/rooms/beauty4/beauty4-01.jpg",
+      "/images/rooms/beauty4/beauty4-03-6personas.jpg",
+      "/images/rooms/beauty4/beauty4-02-unidos.jpg",
+    ],
     // TODO(Peach Estudio): confirmar características reales.
     features: [
       "Barra para 4 puestos (ampliable a 6)",
@@ -114,7 +118,12 @@ export const rooms: Room[] = [
     currency: "ARS",
     capacity: 1,
     coverImage: "/images/rooms/beauty-individual/beauty-individual-01.jpg",
-    gallery: ["/images/rooms/beauty-individual/beauty-individual-01.jpg"],
+    gallery: [
+      "/images/rooms/beauty-individual/beauty-individual-01.jpg",
+      "/images/rooms/beauty-individual/beauty-individual-04.jpg",
+      "/images/rooms/beauty-individual/beauty-individual-02-6personas.jpg",
+      "/images/rooms/beauty-individual/beauty-individual-03-unidos.jpg",
+    ],
     features: [
       "Puesto individual",
       "Espejo de 2,20 m de alto",
@@ -154,6 +163,7 @@ export const rooms: Room[] = [
     gallery: [
       "/images/rooms/beauty-privado/beauty-privado-01.jpg",
       "/images/rooms/beauty-privado/beauty-privado-02.jpg",
+      "/images/rooms/beauty-privado/beauty-privado-03-unidos.jpg",
     ],
     features: [
       "Espacio privado",
@@ -198,11 +208,15 @@ export const rooms: Room[] = [
       "Estudio completo por jornada. Reserva del 50%; el 50% restante se abona ese día. La reserva no se devuelve si no asistís.",
     currency: "ARS",
     sizeLabel: "3 x 5 m",
-    coverImage: "/images/rooms/estudio/estudio-01.jpg",
+    // Portada: fondo blanco. Galería: los 3 fondos (blanco, negro, verde) + set.
+    coverImage: "/images/rooms/estudio/fondo-blanco.png",
     gallery: [
-      "/images/rooms/estudio/estudio-01.jpg",
-      "/images/rooms/estudio/estudio-02.jpg",
-      "/images/rooms/estudio/estudio-03.jpg",
+      "/images/rooms/estudio/fondo-blanco.png",
+      "/images/rooms/estudio/fondo-negro.png",
+      "/images/rooms/estudio/fondo-verde.jpg",
+      "/images/rooms/estudio/masterclass-01.jpg",
+      "/images/rooms/estudio/masterclass-02.jpg",
+      "/images/rooms/estudio/masterclass-03.jpg",
     ],
     features: [
       "Espacio de 3 x 5 m",

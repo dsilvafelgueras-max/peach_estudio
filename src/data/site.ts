@@ -10,14 +10,15 @@ export const site = {
 
   // TODO(Peach Estudio): reemplazar por datos reales.
   contact: {
-    email: "peachestudioinfo@gmail.com",
+    // Email pendiente: Peach Estudio enviará el correcto. Vacío = no se muestra.
+    email: "",
     // Teléfono / WhatsApp del estudio. Para el link de WhatsApp se usan solo
     // los dígitos (con código de país).
     phone: "+54 9 11 3410-3143",
     whatsapp: "5491134103143",
     instagram: "[INSTAGRAM_PEACH_STUDIO]",
-    address: "Güemes 4821, Palermo, CABA",
-    // Zona general (por si se prefiere no mostrar la altura exacta en algún lugar).
+    // Dirección exacta oculta a pedido: se muestra solo la zona general.
+    address: "",
     area: "Palermo, CABA",
     hours: "[HORARIOS_PEACH_STUDIO]",
   },

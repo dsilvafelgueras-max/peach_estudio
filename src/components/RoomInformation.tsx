@@ -25,8 +25,8 @@ export default function RoomInformation({ room }: { room: Room }) {
       "Mínimo de horas",
       room.minimumHours ? `${room.minimumHours} horas` : "A confirmar",
     ],
-    // No mostrar dirección exacta hasta confirmar.
-    ["Ubicación", site.contact.address],
+    // Solo zona general, sin dirección exacta.
+    ["Ubicación", site.contact.area],
   ];
 
   return (

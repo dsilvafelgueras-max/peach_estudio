@@ -172,7 +172,7 @@ export default async function RoomPage({
               <WhatsAppButton message={waMessage} label="Escribir por WhatsApp" />
             </div>
             <p className="mt-6 text-sm text-ink-muted">
-              El estudio queda en {site.contact.address}.
+              El estudio queda en {site.contact.area}.
             </p>
           </div>
         </div>
