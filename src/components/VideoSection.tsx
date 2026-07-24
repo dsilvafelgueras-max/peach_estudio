@@ -21,21 +21,19 @@ export default function VideoSection() {
           />
         </Reveal>
 
-        {/* El video es vertical (formato celular): lo mostramos en retrato,
-            centrado y con altura contenida para que no se recorte. */}
+        {/* El video es vertical (formato celular). Usamos object-contain y un
+            tamaño acotado (altura máxima) para que no se deforme ni se agrande. */}
         <Reveal className="mx-auto mt-12 flex justify-center">
-          <div className="relative aspect-[9/16] w-full max-w-[360px] overflow-hidden rounded-2xl bg-ink/5">
-            <video
-              src={videoSrc}
-              poster={poster}
-              controls
-              playsInline
-              preload="metadata"
-              className="h-full w-full object-cover"
-            >
-              Tu navegador no puede reproducir este video.
-            </video>
-          </div>
+          <video
+            src={videoSrc}
+            poster={poster}
+            controls
+            playsInline
+            preload="metadata"
+            className="h-auto max-h-[70vh] w-auto max-w-full rounded-2xl bg-black object-contain"
+          >
+            Tu navegador no puede reproducir este video.
+          </video>
         </Reveal>
       </div>
     </section>
