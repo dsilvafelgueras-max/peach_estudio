@@ -12,10 +12,9 @@ export const site = {
   contact: {
     email: "[EMAIL_PEACH_STUDIO]",
     // Teléfono / WhatsApp del estudio. Para el link de WhatsApp se usan solo
-    // los dígitos (con código de país). Ej. Argentina: "5491112345678".
-    // TODO(Peach Estudio): completar con el número real.
-    phone: "[TELEFONO_PEACH_STUDIO]",
-    whatsapp: "[WHATSAPP_PEACH_STUDIO]",
+    // los dígitos (con código de país).
+    phone: "+54 9 11 3410-3143",
+    whatsapp: "5491134103143",
     instagram: "[INSTAGRAM_PEACH_STUDIO]",
     address: "Güemes 4821, Palermo, CABA",
     // Zona general (por si se prefiere no mostrar la altura exacta en algún lugar).
