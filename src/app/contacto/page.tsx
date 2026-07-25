@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Phone, Instagram, MapPin, Clock } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import WhatsAppForm from "@/components/WhatsAppForm";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -18,9 +18,6 @@ const contactItems = [
   { icon: Clock, label: "Horarios", value: site.contact.hours },
 ];
 
-const waMessage =
-  "¡Hola Peach Estudio! Quiero consultar disponibilidad de los espacios. ¿Me pasan info?";
-
 export default function ContactoPage() {
   return (
     <>
@@ -30,10 +27,10 @@ export default function ContactoPage() {
             as="h1"
             eyebrow="Contacto"
             title="Hablemos de tu proyecto."
-            description="Escribinos por WhatsApp y coordinamos disponibilidad, horario y precio. Te respondemos a la brevedad."
+            description="Completá tus datos y al enviar se abre WhatsApp con todo cargado. Coordinamos disponibilidad, horario y precio a la brevedad."
           />
-          <div className="mt-8">
-            <WhatsAppButton message={waMessage} label="Escribir por WhatsApp" />
+          <div className="mt-10 lg:max-w-3xl">
+            <WhatsAppForm />
           </div>
         </div>
       </section>

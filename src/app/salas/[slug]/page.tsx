@@ -8,7 +8,7 @@ import RoomGallery from "@/components/RoomGallery";
 import RoomInformation from "@/components/RoomInformation";
 import RoomConditions from "@/components/RoomConditions";
 import FeaturesGrid from "@/components/FeaturesGrid";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import WhatsAppForm from "@/components/WhatsAppForm";
 
 type Params = { slug: string };
 
@@ -48,9 +48,6 @@ export default async function RoomPage({
   const room = getRoomBySlug(slug);
   if (!room) notFound();
 
-  // Mensaje pre-escrito para WhatsApp, con el espacio que le interesa.
-  const waMessage = `¡Hola Peach Estudio! Quiero consultar disponibilidad para ${room.name}. ¿Me pasan info para reservar?`;
-
   return (
     <article className="pt-24 md:pt-28">
       <div className="container-page">
@@ -77,7 +74,9 @@ export default async function RoomPage({
             <span className="text-ink-muted">Precio: </span>
             {room.priceLabel}
           </p>
-          <WhatsAppButton message={waMessage} label="Reservar por WhatsApp" className="text-sm" />
+          <a href="#solicitar" className="btn-primary text-sm">
+            Reservar por WhatsApp
+          </a>
         </div>
         {room.priceNote && (
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-muted">
@@ -148,28 +147,26 @@ export default async function RoomPage({
             <div className="mt-6">
               <RoomInformation room={room} />
             </div>
-            <WhatsAppButton
-              message={waMessage}
-              label="Reservar por WhatsApp"
-              className="mt-6 w-full"
-            />
+            <a href="#solicitar" className="btn-primary mt-6 w-full">
+              Reservar por WhatsApp
+            </a>
           </div>
         </aside>
       </div>
 
-      {/* 8.8 Reserva por WhatsApp */}
+      {/* 8.8 Formulario que arma el mensaje de WhatsApp */}
       <section id="solicitar" className="mt-20 scroll-mt-24 bg-peach-50">
         <div className="container-page py-20 md:py-24">
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-2xl">
             <h2 className="font-serif text-3xl text-ink sm:text-4xl">
-              Reservá por WhatsApp
+              Reservá {room.name}
             </h2>
             <p className="mt-3 text-base leading-relaxed text-ink-soft">
-              Escribinos por WhatsApp y coordinamos disponibilidad, horario y precio de{" "}
-              {room.name}. Te respondemos a la brevedad.
+              Completá tus datos y al enviar se abre WhatsApp con todo cargado. Coordinamos
+              disponibilidad, horario y precio a la brevedad.
             </p>
-            <div className="mt-8 flex justify-center">
-              <WhatsAppButton message={waMessage} label="Escribir por WhatsApp" />
+            <div className="mt-8">
+              <WhatsAppForm roomName={room.name} />
             </div>
             <p className="mt-6 text-sm text-ink-muted">
               El estudio queda en {site.contact.area}.
