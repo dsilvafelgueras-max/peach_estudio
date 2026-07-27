@@ -2,12 +2,12 @@ import SectionHeading from "@/components/SectionHeading";
 import Reveal from "@/components/Reveal";
 
 // Sección de video del recorrido por el estudio.
-// Para cambiar el video, reemplazá public/videos/recorrido.mp4 (mismo nombre)
-// o actualizá videoSrc / poster acá.
+// Para cambiar el video, reemplazá public/videos/recorrido-horizontal.mp4
+// (mismo nombre) o actualizá videoSrc / poster acá.
 export default function VideoSection() {
-  const videoSrc = "/videos/recorrido.mp4";
-  // Póster vertical para que combine con el formato del video (retrato).
-  const poster = "/images/rooms/estudio/estudio-02.jpg";
+  const videoSrc = "/videos/recorrido-horizontal.mp4";
+  // Póster horizontal que combina con el formato del video (16:9).
+  const poster = "/images/rooms/estudio/fondo-blanco.png";
 
   return (
     <section className="border-t border-line">
@@ -21,8 +21,9 @@ export default function VideoSection() {
           />
         </Reveal>
 
-        {/* El video es vertical (formato celular). Usamos object-contain y un
-            tamaño acotado (altura máxima) para que no se deforme ni se agrande. */}
+        {/* Video horizontal (16:9). Se muestra en un ancho acotado a su
+            resolución nativa para que se vea nítido y no pixelado, centrado y
+            sin deformarse. */}
         <Reveal className="mx-auto mt-12 flex justify-center">
           <video
             src={videoSrc}
@@ -30,7 +31,7 @@ export default function VideoSection() {
             controls
             playsInline
             preload="metadata"
-            className="h-auto max-h-[70vh] w-auto max-w-full rounded-2xl bg-black object-contain"
+            className="aspect-video w-full max-w-[820px] rounded-2xl bg-black object-contain"
           >
             Tu navegador no puede reproducir este video.
           </video>

@@ -18,8 +18,8 @@ export default function PatioSection() {
           <Reveal className="order-1 grid grid-cols-2 gap-3 lg:order-2">
             <div className="relative col-span-2 aspect-[16/10] overflow-hidden bg-peach-50">
               <Image
-                src="/images/rooms/patio/patio-01.jpg"
-                alt="Patio de Peach Estudio"
+                src="/images/rooms/patio/patio-05-mesa.jpg"
+                alt="Patio de Peach Estudio con mesa de madera y mural tropical"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
@@ -27,8 +27,8 @@ export default function PatioSection() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden bg-peach-50">
               <Image
-                src="/images/rooms/patio/patio-03.jpg"
-                alt="Mural tropical del patio de Peach Estudio"
+                src="/images/rooms/patio/patio-06.jpg"
+                alt="Mural tropical y mesa del patio de Peach Estudio"
                 fill
                 sizes="(min-width: 1024px) 25vw, 50vw"
                 loading="lazy"
@@ -37,8 +37,8 @@ export default function PatioSection() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden bg-peach-50">
               <Image
-                src="/images/rooms/patio/patio-04.jpg"
-                alt="Mesa y ambientación del patio de Peach Estudio"
+                src="/images/rooms/patio/patio-01.jpg"
+                alt="Patio ambientado de Peach Estudio"
                 fill
                 sizes="(min-width: 1024px) 25vw, 50vw"
                 loading="lazy"
