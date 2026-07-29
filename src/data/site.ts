@@ -16,7 +16,8 @@ export const site = {
     // los dígitos (con código de país).
     phone: "+54 9 11 3410-3143",
     whatsapp: "5491134103143",
-    instagram: "[INSTAGRAM_PEACH_STUDIO]",
+    instagram: "@peach__estudio",
+    instagramUrl: "https://instagram.com/peach__estudio",
     // Dirección exacta oculta a pedido: se muestra solo la zona general.
     address: "",
     area: "Palermo, CABA",

@@ -65,7 +65,16 @@ export default function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             {site.contact.email && <li>{site.contact.email}</li>}
             <li>{site.contact.phone}</li>
-            <li>{site.contact.instagram}</li>
+            <li>
+              <a
+                href={site.contact.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline text-white/80 hover:text-white"
+              >
+                {site.contact.instagram}
+              </a>
+            </li>
             <li>{site.contact.area}</li>
           </ul>
           <ul className="mt-6 space-y-3 text-sm">

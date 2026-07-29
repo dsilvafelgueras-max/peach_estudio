@@ -12,10 +12,20 @@ export const metadata: Metadata = {
 };
 
 const contactItems = [
-  { icon: Phone, label: "Teléfono / WhatsApp", value: site.contact.phone },
-  { icon: Instagram, label: "Instagram", value: site.contact.instagram },
-  { icon: MapPin, label: "Ubicación", value: site.contact.area },
-  { icon: Clock, label: "Horarios", value: site.contact.hours },
+  {
+    icon: Phone,
+    label: "Teléfono / WhatsApp",
+    value: site.contact.phone,
+    href: `https://wa.me/${site.contact.whatsapp}`,
+  },
+  {
+    icon: Instagram,
+    label: "Instagram",
+    value: site.contact.instagram,
+    href: site.contact.instagramUrl,
+  },
+  { icon: MapPin, label: "Ubicación", value: site.contact.area, href: undefined },
+  { icon: Clock, label: "Horarios", value: site.contact.hours, href: undefined },
 ];
 
 export default function ContactoPage() {
@@ -51,7 +61,18 @@ export default function ContactoPage() {
                   <p className="text-xs uppercase tracking-wide text-ink-muted">
                     {item.label}
                   </p>
-                  <p className="mt-0.5 text-sm text-ink-soft">{item.value}</p>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-0.5 inline-block link-underline text-sm text-ink-soft hover:text-ink"
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <p className="mt-0.5 text-sm text-ink-soft">{item.value}</p>
+                  )}
                 </div>
               </li>
             ))}
