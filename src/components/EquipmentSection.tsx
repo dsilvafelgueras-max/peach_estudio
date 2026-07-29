@@ -7,7 +7,7 @@ import Reveal from "@/components/Reveal";
 const equipment = [
   {
     image: "/images/rooms/estudio/fondo-blanco.png",
-    title: "3 fondos: blanco, negro y verde",
+    title: "3 fondos: blanco, negro y croma",
     text: "El estudio tiene tres fondos a elección. En el detalle del Estudio podés ver los tres.",
   },
   {
@@ -17,8 +17,8 @@ const equipment = [
   },
   {
     image: "/images/equipamiento/croma-luces.jpg",
-    title: "Pantalla verde y pantalla grande",
-    text: "Croma montado y TV de gran tamaño para grabaciones, streaming y contenido.",
+    title: "Fondo croma y pantalla grande",
+    text: "Fondo croma y TV de gran tamaño para grabaciones, streaming y contenido.",
   },
 ];
 
@@ -30,7 +30,7 @@ export default function EquipmentSection() {
           <SectionHeading
             eyebrow="Equipamiento"
             title="Material listo para producir."
-            description="El estudio cuenta con iluminación profesional, fondos, pantalla verde y una pantalla de gran tamaño. El equipamiento disponible se confirma según el espacio y el proyecto."
+            description="El estudio cuenta con iluminación profesional, fondos (blanco, negro y croma) y una pantalla de gran tamaño. El equipamiento disponible se confirma según el espacio y el proyecto."
           />
         </Reveal>
 

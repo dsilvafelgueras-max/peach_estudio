@@ -201,9 +201,9 @@ export const rooms: Room[] = [
       "Un ambiente versátil para sesiones de fotos, retratos, producto y creación de contenido.",
     fullDescription:
       "Un ambiente versátil para sesiones de fotos, retratos, producto y creación de contenido. " +
-      "Espacio de 3 x 5 m, preparado para fotografía, video y producciones, con 3 fondos a elección: blanco, negro y croma (pantalla verde). " +
+      "Espacio de 3 x 5 m, preparado para fotografía, video y producciones, con 3 fondos a elección: blanco, negro y croma. " +
       "Cuenta además con monitor / pantalla grande, ideal para dictar masterclass, cursos y capacitaciones. " +
-      "El fondo verde permite reemplazar el entorno en edición, y el espacio se adapta a producciones chicas y medianas.",
+      "El fondo croma permite reemplazar el entorno en edición, y el espacio se adapta a producciones chicas y medianas.",
     priceLabel: "Jornada completa: $250.000",
     priceNote:
       "Estudio completo por jornada. Reserva del 50%; el 50% restante se abona ese día. La reserva no se devuelve si no asistís.",
