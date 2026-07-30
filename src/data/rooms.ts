@@ -51,9 +51,10 @@ export const roomFilters: { key: "all" | RoomCategory; label: string }[] = [
 // Concepto general del sector beauty (compartido en las descripciones).
 // Pensado para maquilladores profesionales: dictar clases, atender clientes o hacer pruebas.
 const reservaCondiciones = [
-  "Reserva del 50%; el 50% restante se abona el mismo día.",
-  "La reserva no se devuelve en caso de no asistir.",
-  "Cantidad mínima de horas: a confirmar.",
+  "Seña del 50% para reservar; el 50% restante se abona al ingresar.",
+  "La fecha se reserva recién cuando se deposita el 50% de seña.",
+  "Si el total no está abonado, no se puede ingresar.",
+  "La seña no se devuelve en caso de no asistir.",
   "Horario de ingreso y salida: a confirmar.",
   "Cuidado del espacio y del equipamiento a cargo de quien reserva.",
 ];
@@ -204,7 +205,7 @@ export const rooms: Room[] = [
       "El fondo croma permite reemplazar el entorno en edición, y el espacio se adapta a producciones chicas y medianas.",
     priceLabel: "Jornada completa (8 hs): $250.000",
     priceNote:
-      "La jornada completa (8 hs) incluye todo el estudio: los 3 puestos beauty y el estudio de fotografía. Reserva del 50%; el 50% restante se abona ese día. La reserva no se devuelve si no asistís.",
+      "La jornada completa (8 hs) incluye todo el estudio: los 3 puestos beauty y el estudio de fotografía. Seña del 50% para reservar la fecha; el 50% restante se abona al ingresar. La seña no se devuelve si no asistís.",
     currency: "ARS",
     sizeLabel: "3 x 5 m",
     // Portada: fondo blanco. Galería: los 3 fondos (blanco, negro, verde) + set.
@@ -240,8 +241,10 @@ export const rooms: Room[] = [
     ],
     conditions: [
       "Jornada completa (8 hs): $250.000 — incluye los 3 puestos beauty y el estudio de fotografía.",
-      "Reserva del 50%; el 50% restante se abona el mismo día.",
-      "La reserva no se devuelve en caso de no asistir.",
+      "Seña del 50% para reservar; el 50% restante se abona al ingresar.",
+      "La fecha se reserva recién cuando se deposita el 50% de seña.",
+      "Si el total no está abonado, no se puede ingresar.",
+      "La seña no se devuelve en caso de no asistir.",
       "Horario de ingreso y salida: a confirmar.",
       "Cuidado del espacio y del equipamiento a cargo de quien reserva.",
     ],
