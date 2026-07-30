@@ -18,9 +18,9 @@ export const site = {
     whatsapp: "5491134103143",
     instagram: "@peach__estudio",
     instagramUrl: "https://instagram.com/peach__estudio",
-    // Dirección exacta oculta a pedido: se muestra solo la zona general.
+    // Dirección exacta oculta a pedido: se muestra solo la zona / esquina.
     address: "",
-    area: "Palermo, CABA",
+    area: "Palermo — Güemes y Godoy Cruz, CABA",
   },
 } as const;
 
