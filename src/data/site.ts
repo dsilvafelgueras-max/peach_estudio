@@ -21,7 +21,6 @@ export const site = {
     // Dirección exacta oculta a pedido: se muestra solo la zona general.
     address: "",
     area: "Palermo, CABA",
-    hours: "[HORARIOS_PEACH_STUDIO]",
   },
 } as const;
 

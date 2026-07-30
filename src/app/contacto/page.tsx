@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Phone, Instagram, MapPin, Clock } from "lucide-react";
+import { Phone, Instagram, MapPin } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import WhatsAppForm from "@/components/WhatsAppForm";
 import { site } from "@/data/site";
@@ -25,7 +25,6 @@ const contactItems = [
     href: site.contact.instagramUrl,
   },
   { icon: MapPin, label: "Ubicación", value: site.contact.area, href: undefined },
-  { icon: Clock, label: "Horarios", value: site.contact.hours, href: undefined },
 ];
 
 export default function ContactoPage() {

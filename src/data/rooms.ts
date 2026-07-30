@@ -64,7 +64,7 @@ export const rooms: Room[] = [
     id: "puesto-para-4",
     slug: "beauty-1",
     name: "Beauty 1",
-    category: "Puesto beauty · para 4 (ampliable a 6)",
+    category: "Puesto beauty",
     categoryKey: "beauty",
     shortDescription:
       "Barra con espejo iluminado para trabajar hasta 4 personas, ampliable a 6 sumando el puesto de al lado.",
@@ -105,7 +105,7 @@ export const rooms: Room[] = [
     id: "puesto-individual",
     slug: "beauty-2",
     name: "Beauty 2",
-    category: "Puesto beauty · individual",
+    category: "Puesto beauty",
     categoryKey: "beauty",
     shortDescription:
       "Puesto individual con espejo de 2,20 m de alto, cómodo para maquillaje y peinado de una persona.",
@@ -204,9 +204,9 @@ export const rooms: Room[] = [
       "Espacio de 3 x 5 m, preparado para fotografía, video y producciones, con 3 fondos a elección: blanco, negro y croma. " +
       "Cuenta además con monitor / pantalla grande, ideal para dictar masterclass, cursos y capacitaciones. " +
       "El fondo croma permite reemplazar el entorno en edición, y el espacio se adapta a producciones chicas y medianas.",
-    priceLabel: "Jornada completa: $250.000",
+    priceLabel: "Jornada completa (8 hs): $250.000",
     priceNote:
-      "Estudio completo por jornada. Reserva del 50%; el 50% restante se abona ese día. La reserva no se devuelve si no asistís.",
+      "Valor de la jornada completa (8 hs) de todo el estudio. Reserva del 50%; el 50% restante se abona ese día. La reserva no se devuelve si no asistís.",
     currency: "ARS",
     sizeLabel: "3 x 5 m",
     // Portada: fondo blanco. Galería: los 3 fondos (blanco, negro, verde) + set.
@@ -241,7 +241,7 @@ export const rooms: Room[] = [
       { name: "Horas extra", priceLabel: "Consultar" },
     ],
     conditions: [
-      "Estudio completo por jornada: $250.000.",
+      "Estudio completo por jornada (8 hs): $250.000.",
       "Reserva del 50%; el 50% restante se abona el mismo día.",
       "La reserva no se devuelve en caso de no asistir.",
       "Horario de ingreso y salida: a confirmar.",
