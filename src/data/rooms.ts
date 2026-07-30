@@ -67,16 +67,15 @@ export const rooms: Room[] = [
     category: "Puesto beauty",
     categoryKey: "beauty",
     shortDescription:
-      "Barra con espejo iluminado para trabajar hasta 4 personas, ampliable a 6 sumando el puesto de al lado.",
+      "Barra con espejo iluminado tipo camarín, ideal para trabajar con varias personas a la vez.",
     fullDescription:
-      "Un puesto de trabajo amplio, con barra y espejo de iluminación tipo camarín, pensado para maquilladores profesionales " +
-      "que necesitan trabajar con varias personas a la vez: desde dictar clases hasta atender clientas o hacer pruebas. " +
-      "Permite trabajar hasta 4 personas y se puede ampliar a 6 sumando el puesto individual (Beauty 2) de al lado. " +
-      "Además del espejo, contamos con mesa auxiliar para accesorios y producciones, y distintas mesas para utilizar según lo que necesites.",
+      "Un puesto de trabajo amplio, con barra y espejo de iluminación tipo camarín, pensado para maquilladores profesionales: " +
+      "desde dictar clases hasta atender clientas o hacer pruebas. Se puede sumar el puesto individual (Beauty 2) de al lado cuando " +
+      "necesitás más lugar. Además del espejo, contamos con mesa auxiliar para accesorios y producciones, y distintas mesas para utilizar según lo que necesites.",
     priceLabel: "Consultar",
     currency: "ARS",
     capacity: 4,
-    capacityLabel: "4 personas (ampliable a 6 sumando el puesto de al lado)",
+    capacityLabel: "4 personas (ampliable a 6 sumando Beauty 2)",
     coverImage: "/images/rooms/beauty4/beauty4-01.jpg",
     gallery: [
       "/images/rooms/beauty4/beauty4-01.jpg",
@@ -112,7 +111,7 @@ export const rooms: Room[] = [
     fullDescription:
       "Un puesto de trabajo individual, con espejo de 2,20 m de alto, ideal para maquilladores profesionales que atienden " +
       "a una clienta con comodidad, hacen pruebas o preparan un look sin apuro. Un ambiente prolijo y con buena luz para " +
-      "trabajar en detalle. Se puede combinar con el puesto para 4 (Beauty 1) de al lado cuando necesitás más lugar. " +
+      "trabajar en detalle. Se puede combinar con Beauty 1 de al lado cuando necesitás más lugar. " +
       "Contamos también con mesa auxiliar para accesorios y distintas mesas para utilizar.",
     priceLabel: "Consultar",
     currency: "ARS",
@@ -150,12 +149,11 @@ export const rooms: Room[] = [
     categoryKey: "beauty",
     isPrivate: true,
     shortDescription:
-      "Espacio privado para 2 personas, con espera para 2 más. Ideal para prueba de novia. Camilla opcional para tratamientos.",
+      "Espacio privado, ideal para prueba de novia. Camilla opcional para tratamientos.",
     fullDescription:
-      "El único puesto privado del estudio: un espacio reservado para atender a 2 personas, con lugar de espera para 2 más. " +
-      "Ideal para pruebas de novia, atención personalizada y servicios que necesitan intimidad. " +
-      "Cuenta con camilla opcional marca Sierra Comfort, exclusiva de este espacio, ideal para tratamientos faciales, cejas, masajes y más. " +
-      "Un ambiente prolijo y tranquilo, con mesa auxiliar para accesorios y distintas mesas para utilizar.",
+      "El único puesto privado del estudio: un espacio reservado y tranquilo para atención personalizada y servicios que necesitan intimidad. " +
+      "Ideal para pruebas de novia. Cuenta con camilla opcional marca Sierra Comfort, exclusiva de este espacio, ideal para tratamientos " +
+      "faciales, cejas, masajes y más. Un ambiente prolijo, con mesa auxiliar para accesorios y distintas mesas para utilizar.",
     priceLabel: "Consultar",
     currency: "ARS",
     capacity: 2,
@@ -206,7 +204,7 @@ export const rooms: Room[] = [
       "El fondo croma permite reemplazar el entorno en edición, y el espacio se adapta a producciones chicas y medianas.",
     priceLabel: "Jornada completa (8 hs): $250.000",
     priceNote:
-      "Valor de la jornada completa (8 hs) de todo el estudio. Reserva del 50%; el 50% restante se abona ese día. La reserva no se devuelve si no asistís.",
+      "La jornada completa (8 hs) incluye todo el estudio: los 3 puestos beauty y el estudio de fotografía. Reserva del 50%; el 50% restante se abona ese día. La reserva no se devuelve si no asistís.",
     currency: "ARS",
     sizeLabel: "3 x 5 m",
     // Portada: fondo blanco. Galería: los 3 fondos (blanco, negro, verde) + set.
@@ -241,7 +239,7 @@ export const rooms: Room[] = [
       { name: "Horas extra", priceLabel: "Consultar" },
     ],
     conditions: [
-      "Estudio completo por jornada (8 hs): $250.000.",
+      "Jornada completa (8 hs): $250.000 — incluye los 3 puestos beauty y el estudio de fotografía.",
       "Reserva del 50%; el 50% restante se abona el mismo día.",
       "La reserva no se devuelve en caso de no asistir.",
       "Horario de ingreso y salida: a confirmar.",
