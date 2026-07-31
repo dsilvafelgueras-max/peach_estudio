@@ -20,7 +20,12 @@ export default function RoomInformation({ room }: { room: Room }) {
     ["Tipo de espacio", room.category],
     ["Capacidad", capacityValue],
     ["Superficie", sizeValue],
-    ["Precio", room.priceLabel],
+    // Precio solo si está definido.
+    ...(room.priceLabel ? ([["Precio", room.priceLabel]] as [string, string][]) : []),
+    // Reserva mínima solo si está definida.
+    ...(room.minimumHours
+      ? ([["Reserva mínima", `${room.minimumHours} horas`]] as [string, string][])
+      : []),
     // Solo zona general, sin dirección exacta.
     ["Ubicación", site.contact.area],
   ];

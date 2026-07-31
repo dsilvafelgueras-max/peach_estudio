@@ -122,6 +122,9 @@ export default function WhatsAppForm({ roomName }: { roomName?: string }) {
                   {r.name}
                 </option>
               ))}
+              <option value="Todo el estudio (beautys + estudio fotográfico)">
+                Todo el estudio (beautys + estudio fotográfico)
+              </option>
             </select>
           </div>
         )}

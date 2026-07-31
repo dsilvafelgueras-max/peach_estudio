@@ -64,10 +64,12 @@ export default function RoomCard({
                   : "A confirmar"}
             </dd>
           </div>
-          <div className="flex gap-1.5">
-            <dt>Precio:</dt>
-            <dd>{room.priceLabel}</dd>
-          </div>
+          {room.priceLabel && (
+            <div className="flex gap-1.5">
+              <dt>Precio:</dt>
+              <dd>{room.priceLabel}</dd>
+            </div>
+          )}
         </dl>
 
         <Link

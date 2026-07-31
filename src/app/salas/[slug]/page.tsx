@@ -70,10 +70,12 @@ export default async function RoomPage({
           {room.shortDescription}
         </p>
         <div className="mt-6 flex flex-wrap items-center gap-4">
-          <p className="text-lg text-ink">
-            <span className="text-ink-muted">Precio: </span>
-            {room.priceLabel}
-          </p>
+          {room.priceLabel && (
+            <p className="text-lg text-ink">
+              <span className="text-ink-muted">Precio: </span>
+              {room.priceLabel}
+            </p>
+          )}
           <a href="#solicitar" className="btn-primary text-sm">
             Reservar por WhatsApp
           </a>

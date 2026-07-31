@@ -86,14 +86,6 @@ export default function Footer() {
                 Términos y condiciones
               </Link>
             </li>
-            <li>
-              <Link
-                href="/privacidad"
-                className="link-underline text-white/60 hover:text-white"
-              >
-                Política de privacidad
-              </Link>
-            </li>
           </ul>
         </div>
       </div>

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-// Acordeón de condiciones. Los textos son provisorios (pendientes de validación).
+// Acordeón de condiciones: se toca para ver la información.
 export default function RoomConditions({ conditions }: { conditions: string[] }) {
   const [open, setOpen] = useState(false);
 
@@ -26,9 +26,6 @@ export default function RoomConditions({ conditions }: { conditions: string[] })
       </button>
       {open && (
         <div className="pb-6">
-          <p className="mb-3 text-xs uppercase tracking-wide text-ink-muted">
-            Información provisoria, pendiente de confirmación.
-          </p>
           <ul className="space-y-2 text-sm text-ink-soft">
             {conditions.map((c) => (
               <li key={c} className="flex gap-2">
