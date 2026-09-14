@@ -14,8 +14,8 @@ export const site = {
     email: "",
     // Teléfono / WhatsApp del estudio. Para el link de WhatsApp se usan solo
     // los dígitos (con código de país).
-    phone: "+34 607 01 01 64",
-    whatsapp: "34607010164",
+    phone: "+54 911 5652 5613",
+    whatsapp: "5491156525613",
     instagram: "@peach__estudio",
     instagramUrl: "https://instagram.com/peach__estudio",
     // Dirección exacta oculta a pedido: se muestra solo la zona / esquina.
